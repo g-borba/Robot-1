@@ -29,17 +29,14 @@ TC 02.2
     WaitElementQuery
 
 # Input Text Test
-
 TC 03.1
     Inputxt
 
 # Form Submission Test
-
 TC 04.1
     SbtForm
 
 # Close Browser Test
-
 TC 05.1
     CloseBws
 
