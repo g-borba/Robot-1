@@ -1,42 +1,18 @@
 *** Settings ***
-Documentation       My second test on robot
-Library     SeleniumLibrary
+Documentation       My third test on robot
 
-Resource    ../src/openbws.robot
-Resource    ../src/waitelement.robot
-Resource    ../src/inputxt.robot
-Resource    ../src/sbtform.robot
-Resource    ../src/closebws.robot
+Resource    ../src/resource.robot
 
-*** Variables ***
-${url}      https://www.google.com
-${browser}      chrome
-${search_form}      css=form[name=f]
-${search_query}     css=input[name=q]
-${search_term}      Los Angeles Lakers
+Suite Setup     Open Google
+Suite Teardown  Close Browser
 
 *** Test Cases ***
 
-# Open Browser Test
-TC 01.1
-    OpenBws
+TC 01.1 - Page Elements Test
+    Wait Element
 
-# Page Elements Test
-TC 02.1
-    WaitElementForm
+TC 02.1 - Form Input Text
+    Form Text
 
-TC 02.2
-    WaitElementQuery
-
-# Input Text Test
-TC 03.1
-    Inputxt
-
-# Form Submission Test
-TC 04.1
-    SbtForm
-
-# Close Browser Test
-TC 05.1
-    CloseBws
-
+TC 02.2 - Submitting form
+    Submit Form
