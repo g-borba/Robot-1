@@ -3,11 +3,14 @@ Documentation       Resource file containing variables and keywords
 
 Library     SeleniumLibrary
 
+*** Variables ***
+
+${browser}=     Set Variable    chrome
+
 *** Keywords ***
 
 Open Google
     ${url}=     Set Variable        https://www.google.com
-    ${browser}=     Set Variable    chrome
     Open Browser     ${url}      ${browser}
 
 Wait Element

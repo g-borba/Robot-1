@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+    robot:
+        image: robot
+        container_name: robot
+        volumes:
+            - ./:/Robot-1/
